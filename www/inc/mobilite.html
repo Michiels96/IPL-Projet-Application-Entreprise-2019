@@ -1,0 +1,159 @@
+<!-- PAGE DE GESTION DE MOBILITE -->
+<div id="pageMobilite" style="display:none">
+	<nav class="navbar navbar-expand-lg navbar-light bg-white shadow">
+		<div class="navbar-collapse">
+			<ul class="nav navbar-nav">
+				<li class="nav-item ">
+					<a class="nav-link" style="cursor:pointer" name="redirectionAccueil">Accueil</a>
+				</li>
+				<li class="nav-item active">
+					<a class="nav-link" style="cursor:pointer">Mobilités<span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" style="cursor:pointer" name="redirectionPartenaire">Partenaires</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" style="cursor:pointer" name="redirectionListeEtudiants">Liste des étudiants</a>
+				</li>
+			</ul>
+			<ul class="nav navbar-nav ml-auto">
+				<div class="topbar-divider d-sm-block"></div>
+				<!-- Nav Item - User Information -->
+				<li class="nav-item">
+					<a class="nav-link" name="redirectionModifUtilisateur" style="cursor:pointer" role="button"
+						data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<span class="mr-2 d-lg-inline text-gray-600 small" name="userName"></span>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" role="button" name="boutonDeconnexion"
+						style="cursor:pointer;border-radius:15px">
+						<img src="bootstrap/img/deco.png " style="width:30px;cursor:pointer" alt="image d'une porte">
+					</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<br>
+	<!-- Begin Page Content -->
+	<div class="container-fluid">
+
+		<!-- Page Heading -->
+		<div class="d-sm-flex flex-row-reverse justify-content-between mb-4">
+			<!-- Topbar Search -->
+			<form class="form-inline ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+				<div class="input-group">
+					<input type="text" class="form-control bg-light border-0 small smartSearch"
+						placeholder="Rechercher..." aria-label="Search" aria-describedby="basic-addon2">
+					<div class="input-group-append">
+						<button class="btn btn-primary smartSearchButton" type="button">
+							<i class="fas fa-search fa-sm">Go</i>
+						</button>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="mb-1">
+			<h1 class="h3 mb-0 text-gray-800 pl-5">Gestion des mobilités</h1>
+		</div>
+		<!-- pattern -->
+		<div class="row p-5 justify-content-center" id="patternCard" hidden>
+			<div class="col-lg-12 col-md-12 col-xs-12 pb-2" idMobilite="-1">
+				<div class="card bg-light">
+					<div class="card-body">
+						<div class="row">
+							<div class="col-md-12">
+								<button class="btn btn-outline-secondary" name="btn-x"
+									onClick="removeCard(this)">X</button>
+							</div>
+						</div>
+						<br>
+						<div class="row">
+							<div class="col-md-12 pl-5">
+								<form name="form-mobilite">
+									<div class="form-row">
+										<div class="form-group col-md-4">
+											<div class="input-group-prepend">
+												<div class="input-group-text">Priorité</div>
+												<select class="custom-select" name="priorite">
+													<option value="0">Choose...</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="form-row">
+										<div class="form-group col-md-4">
+											<label for="exampleInputEmail1">Type de séjour :</label><br>
+											<div class="form form-check-inline">
+												<input class="form-check-input" type="radio" name="radio-btn-SM"
+													value="smp" onClick="changeSMP(this)">
+												<label class="form-check-label pr-3">
+													SMP
+												</label>
+												<input class="form-check-input" type="radio" name="radio-btn-SM"
+													value="sms" onClick="changeSMS(this)" checked>
+												<label class="form-check-label">
+													SMS
+												</label>
+											</div>
+										</div>
+										<div class="form-group col-md-2"></div>
+										<div class="form-group col-md-4">
+											<label>Période :</label><br>
+											<div class="form form-check-inline">
+												<input class="form-check-input" type="radio" name="radio-btn-quad"
+													value="1quad" checked>
+												<label class="form-check-label pr-3">
+													1er quadrimestre
+												</label>
+												<input class="form-check-input" type="radio" name="radio-btn-quad"
+													value="2quad">
+												<label class="form-check-label">
+													2ème quadrimestre
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="form-row">
+										<div class="form-group col-md-4" name="div-partenaire">
+											<label>Partenaire :</label>
+											<select onChange="changeSelect(this)" name="select-partenaire"
+												class="form-control">
+												<option selected>Choose...</option>
+											</select>
+										</div>
+										<div class="form-group col-md-2"></div>
+										<div class="form-group col-md-2" name="div-mobilite">
+											<label>Type de mobilité :</label>
+											<input type="text" name="input-typeMobilite" class="form-control" value="">
+										</div>
+										<div class="form-group col-md-2">
+											<label>Pays</label>
+											<select onChange="onChangePays(this)" class="form-control"
+												name="select-pays">
+												<option selected>Choose...</option>
+											</select>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Content Row -->
+		<div class="row p-5 justify-content-center" id="rowCard">
+
+		</div>
+		<div class="row pl-5 pr-5">
+			<div class="col-md-4">
+				<button class="btn btn-info" id="btn-add" onClick="creatCard()">+</button>
+			</div>
+			<div class="col-md-8 text-right"><button class="btn btn-success"
+					onClick="enregistrerMobilite()">Enregistrer</button></div>
+		</div>
+	</div>
+	<!-- /.container-fluid -->
+
+</div>

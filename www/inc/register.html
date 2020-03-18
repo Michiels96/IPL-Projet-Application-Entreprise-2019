@@ -1,0 +1,59 @@
+<!-- PAGE D'INSCRIPTION -->
+<div id="pageInscription" style="display:none">
+    <!-- Begin Page Content -->
+    <br>
+    <div class="container-fluid">
+        <div class=" mb-4">
+            <h1 class="h3 mb-0 text-gray-800 text-center">Student Mobility Manager</h1>
+        </div>
+        <div class="card o-hidden border-0 shadow-lg my-5">
+            <div class="card-body p-0">
+                <!-- Nested Row within Card Body -->
+                <div class="row">
+                    <div class="col-lg-5 d-none d-lg-block bg-register-image"></div>
+                    <div class="col-lg-7">
+                        <div class="p-5">
+                            <div class="text-center">
+                                <h1 class="h4 text-gray-900 mb-4">Créer un compte </h1>
+                            </div>
+                            <form class="user" id="formRegister">
+                                <div class="form-group row">
+                                    <div class="col-sm-7">
+                                        <input type="text" class="form-control form-control-user" placeholder="Nom" name="nom">
+                                    </div>
+                                    <div class="col-sm-5 mb-3 mb-sm-0">
+                                        <input type="text" class="form-control form-control-user" placeholder="Prénom" name="prenom">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-7 mb-5 mb-sm-0">
+                                        <input type="text" class="form-control form-control-user" placeholder="Adresse e-mail" name="mail">
+                                    </div>
+                                    <div class="col-sm-5">
+                                        <input type="text" class="form-control form-control-user" placeholder="Pseudo" name="pseudo">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                        <input type="password" class="form-control form-control-user" placeholder="Mot de passe" name="mdp">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="password" class="form-control form-control-user" placeholder="Confirmer mot de passe" name="mdpRepetition">
+                                    </div>
+                                </div>
+                                <a class="btn btn-primary btn-user btn-block" id="creerCompte">
+                                    <div class="text-white ">Créer un compte</div>
+                                </a>
+                                <hr>
+                            </form>
+                            <div class="alert alert-error" name="notification"></div> 
+                            <div class="text-center">
+                                <a class="small" id="dejaCompte">Déjà un compte ? Connectez-vous</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

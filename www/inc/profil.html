@@ -1,0 +1,237 @@
+<!-- PAGE PROFIL UTILISATEUR -->
+<div id="pageProfilUtilisateur" style="display:none">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow">
+        <div class="navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" style="cursor:pointer" name="redirectionAccueil">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="cursor:pointer" name="redirectionMobilites">Mobilités</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="cursor:pointer" name="redirectionPartenaire">Partenaires</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="cursor:pointer" name="redirectionListeEtudiants">Liste des étudiants</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav ml-auto">
+                <div class="topbar-divider d-sm-block"></div>
+                <!-- Nav Item - User Information -->
+                <li class="nav-item">
+                    <a class="nav-link" style="cursor:not-allowed" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <span class="mr-2 d-lg-inline text-gray-600 small" name="userName"></span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" role="button" name="boutonDeconnexion"
+                        style="cursor:pointer;border-radius:15px">
+                        <img src="bootstrap/img/deco.png " style="width:30px;cursor:pointer" alt="image d'une porte">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <br>
+    <!-- Begin Page Content -->
+    <div class="container-fluid">
+        <!-- Page Heading -->
+        <div class="col-lg-12 col-md-12 col-xs-12 pb-2">
+            <div class="card bg-light">
+                <div class="card-body">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-12 pl-5">
+                            <div class="p-5">
+                                <div class="text-center">
+                                    <h1 class="h4 text-gray-900 mb-4">Modifier profil</h1>
+                                </div>
+                                <div style="display:flex;justify-content:center">
+                                    <form id="formModifInfo" >
+                                        <div name="afficherSectionMdp" style="display:flex;justify-content:center;margin-bottom:5%">
+                                            <span name="afficherSectionMdpSpan" style="color:#c12121">Cliquer ici pour modifier votre mot de passe</span>
+                                        </div>
+                                        <div name="sectionMdp" hidden>
+                                            <div class="form-group row" style="margin-left:0%">
+                                               <div class="col-sm-12" style="padding-left:0%">
+                                                    <div class="input-group mb-2">
+                                                        <div class="input-group-prepend">
+                                                            <label class="input-group-text" for="inputGroupSelect01">Nouveau mot de passe:</label>
+                                                        </div>
+                                                        <input type="password" class="form-control form-control-user" name="mdp">
+                                                    </div>
+                                                </div> 
+                                                <div class="col-sm-12" style="padding-left:0%">
+                                                    <div class="input-group mb-2">
+                                                        <div class="input-group-prepend">
+                                                            <label class="input-group-text" for="inputGroupSelect01">Retapez votre mot de passe:</label>
+                                                        </div>
+                                                        <input type="password" class="form-control form-control-user" name="mdpBis">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row" style="margin-left:0%">
+                                           <div class="col-sm-12" style="padding-left:0%">
+                                                <div class="input-group mb-2">
+                                                    <div class="input-group-prepend">
+                                                        <label class="input-group-text" for="inputGroupSelect01">Nom:</label>
+                                                    </div>
+                                                    <input type="text" class="form-control form-control-user" name="nom">
+                                                </div>
+                                            </div> 
+                                        </div>
+                                        <div class="form-group row" style="margin-left:0%">
+                                           <div class="col-sm-12" style="padding-left:0%">
+                                                <div class="input-group mb-2">
+                                                    <div class="input-group-prepend">
+                                                        <label class="input-group-text" for="inputGroupSelect01">Prenom:</label>
+                                                    </div>
+                                                    <input type="text" class="form-control form-control-user" name="prenom">
+                                                </div>
+                                            </div> 
+                                        </div>
+                                        <div class="form-group row" style="margin-left:0%">
+                                           <div class="col-sm-12" style="padding-left:0%">
+                                                <div class="input-group mb-2">
+                                                    <div class="input-group-prepend">
+                                                        <label class="input-group-text" for="inputGroupSelect01">E-mail:</label>
+                                                    </div>
+                                                    <input type="text" class="form-control form-control-user" name="mail">
+                                                </div>
+                                            </div> 
+                                        </div>
+                                        <div class="form-group row" style="margin-left:0%">
+                                           <div class="col-sm-12" style="padding-left:0%">
+                                                <div class="input-group mb-2">
+                                                    <div class="input-group-prepend">
+                                                        <label class="input-group-text" for="inputGroupSelect01">Titulaire du compte:</label>
+                                                    </div>
+                                                    <input type="text" class="form-control form-control-user" name="titulaireCompte">
+                                                </div>
+                                            </div> 
+                                        </div>
+                                        <div class="form-group row" style="margin-left:0%">
+                                             <div class="col-sm-12" style="padding-left:0%">
+                                                <div class="input-group mb-2">
+                                                    <div class="input-group-prepend">
+                                                        <label class="input-group-text" for="inputGroupSelect01">Nom de banque:</label>
+                                                    </div>
+                                                    <input type="text" class="form-control form-control-user" name="nomBanque">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row" style="margin-left:0%">
+                                             <div class="col-sm-12" style="padding-left:0%">
+                                                <div class="input-group mb-2">
+                                                    <div class="input-group-prepend">
+                                                        <label class="input-group-text" for="inputGroupSelect01">Numéro de compte bancaire:</label>
+                                                    </div>
+                                                    <input type="text" class="form-control form-control-user"name="numBanque">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row" style="margin-left:0%">
+                                            <div class="col-sm-12" style="padding-left:0%">
+                                                <div class="input-group mb-2">
+                                                    <div class="input-group-prepend">
+                                                        <label class="input-group-text" for="inputGroupSelect01">Code Bic:</label>
+                                                    </div>
+                                                    <input type="text" class="form-control form-control-user" name="codeBic">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row" style="margin-left:0%">
+                                            <div class="col-sm-12" style="padding-left:0%">
+                                                <div class="input-group mb-2">
+                                                    <div class="input-group-prepend mb-2">
+                                                        <span class="input-group-text" id="basic-addon1">Date de naissance :</span>
+                                                    </div>
+                                                    <input type="date" class="form-control form-control-user" name="dateNaissance">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row" style="margin-left:0%">
+                                            <div class="col-sm-12" style="padding-left:0%">
+                                                <div class="input-group mb-2">
+                                                    <div class="input-group-prepend">
+                                                        <label class="input-group-text" for="inputGroupSelect01">Sexe:</label>
+                                                    </div>
+                                                    <select name="selectSexe" class="custom-select">
+                                                        <option name="optionSexeVide" selected></option>
+                                                        <option value="F">Femme</option>
+                                                        <option value="H">Homme</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row" style="margin-left:0%">
+                                            <div class="col-sm-12" style="padding-left:0%">
+                                                <div class="input-group mb-2">
+                                                    <div class="input-group-prepend">
+                                                        <label class="input-group-text">Numero de telephone:</label>
+                                                    </div>
+                                                    <input type="text" class="form-control form-control-user" name="numTel">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row" style="margin-left:0%">
+                                            <div class="col-sm-12" style="padding-left:0%">
+                                                <div class="input-group mb-2">
+                                                    <div class="input-group-prepend">
+                                                        <label class="input-group-text" for="inputGroupSelect01">Adresse:</label>
+                                                    </div>
+                                                    <input type="text" class="form-control form-control-user" name="adresse">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row" style="margin-left:0%">
+                                            <div class="col-sm-12" style="padding-left:0%">
+                                                <div class="input-group mb-2">
+                                                    <div class="input-group-prepend">
+                                                        <label class="input-group-text" for="inputGroupSelect01">Code Postal (CP):</label>
+                                                    </div>
+                                                    <input type="number" class="form-control form-control-user" name="codePostal">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row" style="margin-left:0%">
+                                            <div class="col-sm-12" style="padding-left:0%">
+                                                <div class="input-group mb-2">
+                                                    <div class="input-group-prepend">
+                                                        <label class="input-group-text" for="inputGroupSelect01">Nombre d'années réussies:</label>
+                                                    </div>
+                                                    <input type="number" class="form-control form-control-user" name="nbAnnee">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row" style="margin-left:0%">
+                                            <div class="col-sm-12" style="padding-left:0%">
+                                                <div class="input-group mb-2">
+                                                    <div class="input-group-prepend">
+                                                        <label class="input-group-text" for="inputGroupSelect01">Nationalité:</label>
+                                                    </div>
+                                                    <select name="selectNationalite" class="custom-select">
+                                                        <option selected></option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <a class="btn btn-primary btn-user btn-block" id=modifierCompte>
+                                            <div class="text-white">Modifier profil</div>
+                                        </a>
+                                        <hr>
+                                    </form>
+                                </div>
+                                <div class="alert alert-error" name="notification" style="display:flex;justify-content:center">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

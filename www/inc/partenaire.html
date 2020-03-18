@@ -1,0 +1,124 @@
+<!-- PAGE PARTENAIRE -->
+<div id="pagePartenaire" style="display:none">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow">
+        <div class="navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" style="cursor:pointer" name="redirectionAccueil">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="cursor:pointer" name="redirectionMobilites">Mobilités</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" style="cursor:pointer" name="redirectionPartenaire">Partenaires</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="cursor:pointer" name="redirectionListeEtudiants">Liste des étudiants</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav ml-auto">
+                <div class="topbar-divider d-sm-block"></div>
+                <!-- Nav Item - User Information -->
+                <li class="nav-item">
+                    <a class="nav-link" name="redirectionModifUtilisateur" style="cursor:pointer" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <span class="mr-2 d-lg-inline text-gray-600 small" name="userName"></span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" role="button" name="boutonDeconnexion"
+                        style="cursor:pointer;border-radius:15px">
+                        <img src="bootstrap/img/deco.png " style="width:30px;cursor:pointer" alt="image d'une porte">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <br>
+    <div class="container-fluid">
+
+        <!-- Page Heading -->
+        <div class="d-sm-flex flex-row-reverse justify-content-between mb-4">
+            <!-- Topbar Search -->
+            <form class="form-inline ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                <div class="input-group">
+                    <input type="text" class="form-control bg-light border-0 small smartSearch" placeholder="Rechercher..."
+                        aria-label="Search" aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary smartSearchButton" type="button">
+                            <i class="fas fa-search fa-sm">Go</i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="mb-1">
+            <h1 class="h3 mb-0 text-gray-800 pl-5">Gestion des partenaires</h1>
+        </div>
+        <br>
+        <div class="btn btn-success ml-5" name="redirectionAjoutPartenaire">Ajouter un partenaire</div>
+        <!-- pattern -->
+        <div class="row p-5 justify-content-center" id="patternCardPartenaire" hidden>
+            <div class="col-lg-12 col-md-12 col-xs-12 pb-2">
+                <div class="card bg-light">
+                    <div class="card-body" id="cardBodyParenaire">
+                        <div class="row">
+                            <div class="col-md-12 pl-5" id="">
+                                <form name="form-partenaire">
+                                    <div class="form-row">
+                                        <div class="form-group col-md-4">
+                                            <label>Nom :</label><br>
+                                            <input type="text" name="nomEntreprise" readonly class="form-control"
+                                                value="">
+                                        </div>
+                                        <div class="form-group col-md-1"></div>
+                                        <div class="form-group col-md-2">
+                                            <label for="exampleInputEmail1">Type de séjour :</label><br>
+                                            <input type="text" name="typeSejour" readonly class="form-control"
+                                                value="">
+                                        </div>
+                                        <div class="form-group col-md-1"></div>
+                                        <div class="form-group col-md-3">
+                                            <label for="exampleInputEmail1">Numéro de téléphone :</label><br>
+                                            <input type="text" name="numTelephone" readonly class="form-control"
+                                                value="">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-3" name="div-partenaire">
+                                            <label>Adresse :</label>
+                                            <input type="text" name="adresse" readonly class="form-control"
+                                                value="">
+                                        </div>
+
+                                        <div class="form-group col-md-1"></div>
+                                        <div class="form-group col-md-2" name="div-partenaire">
+                                            <label>Pays :</label>
+                                            <input type="text" name="pays" readonly class="form-control" value="">
+                                        </div>
+                                        <div class="form-group col-md-1"></div>
+                                        <div class="form-group col-md-2" name="div-partenaire">
+                                            <label>Ville :</label>
+                                            <input type="text" name="ville" readonly class="form-control"
+                                                value="">
+                                        </div>
+                                        <div class="form-group col-md-1"></div>
+                                        <div class="form-group col-md-2" name="div-partenaire">
+                                            <label>Code postal :</label>
+                                            <input type="text" name="cp" readonly class="form-control" value="">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Content Row -->
+        <div class="row p-5 justify-content-center" id="rowCardPartenaire">
+
+        </div>
+    </div>
+    <!-- /.container-fluid -->
+</div>

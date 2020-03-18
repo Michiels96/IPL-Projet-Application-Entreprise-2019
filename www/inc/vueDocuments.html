@@ -1,0 +1,212 @@
+<!-- PAGE GESTION DOCUMENTS D UNE MOBILITE -->
+<div id="pageDocuments" style="display: none">
+	<nav class="navbar navbar-expand-lg navbar-light bg-white shadow">
+		<div class="navbar-collapse">
+			<ul class="nav navbar-nav">
+				<li class="nav-item "><a class="nav-link" style="cursor: pointer" name="redirectionAccueil">Accueil</a>
+				</li>
+				<li class="nav-item"><a class="nav-link" style="cursor: pointer"
+						name="redirectionMobilites">Mobilités</a>
+				</li>
+				<li class="nav-item"><a class="nav-link" style="cursor: pointer"
+						name="redirectionPartenaire">Partenaires</a>
+				</li>
+				<li class="nav-item"><a class="nav-link" style="cursor: pointer" name="redirectionListeEtudiants">Liste
+						des étudiants</a></li>
+			</ul>
+			<ul class="nav navbar-nav ml-auto">
+				<div class="topbar-divider d-sm-block"></div>
+				<!-- Nav Item - User Information -->
+				<li class="nav-item"><a class="nav-link" name="redirectionModifUtilisateur" style="cursor: pointer"
+						role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <span
+							class="mr-2 d-lg-inline text-gray-600 small" name="userName"></span>
+					</a></li>
+				<li class="nav-item"><a class="nav-link" role="button" name="boutonDeconnexion"
+						style="cursor: pointer; border-radius: 15px"> <img src="bootstrap/img/deco.png "
+							style="width: 30px; cursor: pointer" alt="image d'une porte">
+					</a></li>
+			</ul>
+		</div>
+	</nav>
+	<br>
+	<!-- Begin Page Content -->
+	<div class="container-fluid">
+		<!-- Page Heading -->
+		<div class="row justify-content-md-center">
+			<div class="col-lg-7 col-md-7 col-xs-7 pb-2">
+				<div class="card bg-light">
+					<div class="card-body">
+						<div class="row justify-content-center">
+							<div class="col-lg-12 pl-5">
+								<div class="p-2">
+									<form name="form-documents">
+										<div class="form-row">
+											<div class="form-group col-md-6" id="docDepart">
+												<h3>Documents départ</h3>
+												<div class="form-row">
+													<div class="form-group form-check" id="pourSuisse">
+														<input type="checkbox" name="contratBourse"
+															class="form-check-input"> <label class="form-check-label"
+															for="exampleCheck1">Contrat
+															de bourse</label>
+													</div>
+												</div>
+												<div class="form-row">
+													<div class="form-group form-check">
+														<input type="checkbox" name="conventionStageEtude"
+															class="form-check-input"> <label class="form-check-label"
+															for="exampleCheck1">Convention
+															de stage / d'études</label>
+													</div>
+												</div>
+												<div class="form-row">
+													<div class="form-group form-check">
+														<input type="checkbox" name="charteEtudiant"
+															class="form-check-input"> <label class="form-check-label"
+															for="exampleCheck1">Charte
+															de l'étudiant</label>
+													</div>
+												</div>
+												<div class="form-row">
+													<div class="form-group form-check">
+														<input type="checkbox" name="preuveTestLinguistique"
+															class="form-check-input"> <label class="form-check-label"
+															for="exampleCheck1">Preuve
+															de passage des tests linguistique</label>
+													</div>
+												</div>
+												<div class="form-row">
+													<div class="form-group form-check">
+														<input type="checkbox" name="documentEngagement"
+															class="form-check-input"> <label class="form-check-label"
+															for="exampleCheck1">Document
+															d'engagement</label>
+													</div>
+												</div>
+												<div class="form-row">
+													<h5>Confirmation envoie documents</h5>
+													<div class="form-group form-check">
+														<input type="checkbox" name="envoieDocumentDepart"
+															class="form-check-input"> <label class="form-check-label"
+															for="exampleCheck1">Envoie
+															des documents départ</label>
+													</div>
+												</div>
+												<div class="form-row" id="paiementDepart" hidden>
+													<h5>Confirmation paiement</h5>
+													<div class="form-group form-check">
+														<input type="checkbox" name="confirmationPaiementDepart"
+															class="form-check-input"> <label class="form-check-label"
+															for="exampleCheck1">Paiement
+															effectuer départ</label>
+													</div>
+
+												</div>
+
+											</div>
+											<div class="form-group col-md-6" id="docRetour">
+												<h3>Documents retour</h3>
+												<div class="form-row">
+													<div class="form-group form-check">
+														<input type="checkbox" name="attestationSejour"
+															class="form-check-input"> <label class="form-check-label"
+															for="exampleCheck1">Attestation
+															séjour</label>
+													</div>
+												</div>
+												<div class="form-row">
+													<div class="form-group form-check">
+														<input type="checkbox" name="stageReleveNote"
+															class="form-check-input"> <label class="form-check-label"
+															for="exampleCheck1">Relevé
+															de notes / Certificat de stage</label>
+													</div>
+												</div>
+												<div class="form-row">
+													<div class="form-group form-check">
+														<input type="checkbox" name="rapportFinal"
+															class="form-check-input"> <label class="form-check-label"
+															for="exampleCheck1">Rapport
+															final</label>
+													</div>
+												</div>
+												<div class="form-row">
+													<div class="form-group form-check">
+														<input type="checkbox" name="preuvePassageTest"
+															class="form-check-input"> <label class="form-check-label"
+															for="exampleCheck1">Preuve
+															de passage des tests linguistique</label>
+													</div>
+												</div>
+												<div class="form-row">
+													<h5>Confirmation envoie documents</h5>
+													<div class="form-group form-check">
+														<input type="checkbox" name="envoieDocumentRetour"
+															class="form-check-input"> <label class="form-check-label"
+															for="exampleCheck1">Envoie
+															des documents</label>
+													</div>
+												</div>
+												<div class="form-row" id="paiementRetour" hidden>
+													<h5>Confirmation paiement</h5>
+													<div class="form-group form-check">
+														<input type="checkbox" name="confirmationPaiementRetour"
+															class="form-check-input"> <label class="form-check-label"
+															for="exampleCheck1">Paiement
+															effectuer</label>
+													</div>
+												</div>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+
+							<div class="col-lg-12 text-center">
+								<button type="button" class="btn m-3 btn-primary" name="redirectionMobilites">Retourner
+									vers la liste
+									des mobilités</button>
+								<button type="button" class="btn m-3 btn-primary"
+									name="redirectionListeEtudiants">Retourner vers la liste
+									des étudiants</button>
+								<button type="button" class="btn m-3 btn-success"
+									name="confirmerModifInfoDocuments">enregistrer les
+									modifications</button>
+								<button type="button" class="btn m-3 btn-danger" name="annulerMobEtudiant">Annuler la
+									mobilité</button>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal" tabindex="-1" role="dialog" id="modal" aria-labelledby="myModalLabel1">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="myModalLabel1">Veuillez indiquer la cause d'annulation : </h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<input type="text" id="inputModal" placeholder="Indiquer une raison" value="vide"><br>
+							<button id="submitAnnulation" class="btn m-3 btn-primary">Confirmer</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row justify-content-md-center ">
+				<div class="col-lg-7 col-md-7 col-xs-7 pb-2">
+					<div class="alert alert-success" id="alert-success-doc" role="alert" style="display: none">Mise à
+						jour des
+						informations réussie :-)</div>
+					<div class="alert alert-danger" id="alert-danger-doc" role="alert" style="display: none">Aaaargh!
+						Something went wrong...</div>
+				</div>
+			</div>
+			<div class="alert alert-error" name="notification" style="display: flex; justify-content: center"></div>
+
+		</div>
+	</div>
+</div>
